@@ -41,17 +41,13 @@ export default defineComponent({
       get() {
         return count.value === props.todos.length;
       },
-      set(val) {
+      set(val:boolean) {
         props.allCheck(val);
       },
     });
-    // const delAll = () => {
-    //   props.delCheckedTodo()
-    // }
     return {
       count,
       check,
-      // delAll
     };
   },
 });
